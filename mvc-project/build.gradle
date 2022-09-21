@@ -36,6 +36,9 @@ dependencies {
     implementation 'org.modelmapper:modelmapper:2.4.4'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 
+    //
+    implementation 'org.passay:passay:1.6.1'
+
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
