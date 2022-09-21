@@ -1,0 +1,10 @@
+server:
+  port: 28080
+  servlet:
+    encoding:
+      charset: UTF-8
+    session:
+      timeout: 180m
+      cookie:
+        max-age: 180m
+        name: SSE_JSESSIONID

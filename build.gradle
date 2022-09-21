@@ -1,0 +1,20 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4' apply false
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
+}
+
+allprojects {
+}
+
+
+subprojects { //subproject 들이 공통 적용되는 설정
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    group 'com.sse'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '11'
+}

@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    show-sql: true
+    database-platform: H2
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    hikari:
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem://localhost/~/h2/test;MODE=MYSQL;
+      username: sa
+      password:
+logging:
+  level:
+    org:
+      hibernate:
+        sql: info
+        type.descriptor.sql.BasicBinder: trace
