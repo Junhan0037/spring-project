@@ -1,6 +1,10 @@
 package com.mvc.grade.domain;
 
-import com.mvc.grade.ui.ConsoleOutputUI;
+import com.mvc.oop.grade.domain.Course;
+import com.mvc.oop.grade.domain.Courses;
+import com.mvc.oop.grade.domain.GradeCalculator;
+import com.mvc.oop.grade.domain.GradeResult;
+import com.mvc.oop.grade.ui.ConsoleOutputUI;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 

@@ -21,3 +21,9 @@ $ mysql -u root -p
 # Database 생성
 $ create database TEST_DB DEFAULT CHARACTER UTF8;
 ```
+
+## 목록
+
+- 사칙연산 계산기
+- 학점 계산기
+- 인사관리 시스템
