@@ -7,4 +7,4 @@ server:
       timeout: 180m
       cookie:
         max-age: 180m
-        name: SSE_JSESSIONID
+        name: SPRING_JSESSIONID
