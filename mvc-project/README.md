@@ -1,6 +1,22 @@
 # 나만의 MVC 프레임워크 만들기
 
-## 도커를 이용한 환경 구성하기
+`Spring` 기능들을 `Java` 를 통해 직접 구현해보는 프로젝트 입니다.  
+(`Lombok`, `Spring` 기능 최대한 배제)
+
+
+## 목록
+
+- 연습
+  - 학점 계산기
+  - 인사관리 시스템
+- 다양한 사칙연산 계산기 Version
+  - oop
+  - was
+  - servlet
+- MVC 프레임워크 만들기
+
+
+## 도커를 이용한 환경 구성
 
 ```shell
 # MySQL 도커 이미지 다운로드
@@ -22,12 +38,3 @@ $ mysql -u root -p
 $ create database TEST_DB DEFAULT CHARACTER UTF8;
 ```
 
-## 목록
-
-- 학점 계산기
-- 인사관리 시스템
-- 사칙연산 계산기
-  - oop
-  - was
-  - servlet
-- MVC 프레임워크 만들기
