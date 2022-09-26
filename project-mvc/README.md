@@ -6,15 +6,13 @@
 
 ## 목록
 
-- 연습
-  - 학점 계산기
-  - 인사관리 시스템
 - 다양한 사칙연산 계산기 Version
-  - oop
-  - was
-  - servlet
-- MVC 프레임워크 만들기
-- DI 프레임워크 만들기
+  - [oop](src/main/java/com/mvc/oop)
+  - [was](src/main/java/com/mvc/was)
+  - [servlet](src/main/java/com/mvc/servlet)
+- [JDBC 프로그래밍](src/main/java/com/mvc/jdbc)
+- [MVC 프레임워크 만들기](src/main/java/com/mvc/mvc)
+- [DI 프레임워크 만들기](src/main/java/com/mvc/di)
 
 
 ## 도커를 이용한 환경 구성
