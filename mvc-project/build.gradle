@@ -37,7 +37,7 @@ dependencies {
 
     // Project
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    implementation 'org.reflections:reflections:0.9.12'
+    implementation 'org.reflections:reflections:0.10.2'
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
