@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -18,6 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
  * 시큐리티 설정
  */
 @Configuration
+@EnableWebSecurity
 public class SecurityConfig {
 
     @Bean
@@ -26,8 +28,11 @@ public class SecurityConfig {
                 .authorizeRequests(auth -> auth
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         .mvcMatchers(HttpMethod.GET, "/", "/articles", "/articles/search-hashtag").permitAll()
+                        .antMatchers("/h2-console/**").permitAll() // h2
                         .anyRequest().authenticated()
                 )
+                .csrf().disable()
+                .headers().frameOptions().disable().and() // h2
                 .formLogin().and()
                 .logout().logoutSuccessUrl("/").and()
                 .build();
