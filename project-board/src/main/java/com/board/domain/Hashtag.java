@@ -27,4 +27,10 @@ public class Hashtag extends AuditingFields {
     @Column(nullable = false)
     private String hashtagName; // 해시태크 이름
 
+    public static Hashtag of(String hashtagName) {
+        return Hashtag.builder()
+                .hashtagName(hashtagName)
+                .build();
+    }
+
 }

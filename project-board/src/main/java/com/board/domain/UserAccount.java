@@ -29,4 +29,14 @@ public class UserAccount extends AuditingFields {
 
     private String memo;
 
+    public static UserAccount of(String userId, String userPassword, String email, String nickname, String memo) {
+        return UserAccount.builder()
+                .userId(userId)
+                .userPassword(userPassword)
+                .email(email)
+                .nickName(nickname)
+                .memo(memo)
+                .build();
+    }
+
 }

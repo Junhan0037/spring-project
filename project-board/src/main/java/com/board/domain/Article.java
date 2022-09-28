@@ -46,6 +46,14 @@ public class Article extends AuditingFields {
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
 
+    public static Article of(UserAccount userAccount, String title, String content) {
+        return Article.builder()
+                .userAccount(userAccount)
+                .title(title)
+                .content(content)
+                .build();
+    }
+
     public void addHashtag(Hashtag hashtag) {
         this.getHashtags().add(hashtag);
     }

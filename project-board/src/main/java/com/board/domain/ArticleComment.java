@@ -29,4 +29,12 @@ public class ArticleComment extends AuditingFields {
     @Column(nullable = false, length = 500)
     private String content; // 본문
 
+    public static ArticleComment of(Article article, UserAccount userAccount, String content) {
+        return ArticleComment.builder()
+                .article(article)
+                .userAccount(userAccount)
+                .content(content)
+                .build();
+    }
+
 }
