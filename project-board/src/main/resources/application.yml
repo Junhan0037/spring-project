@@ -7,10 +7,18 @@ server:
       timeout: 180m
       cookie:
         max-age: 180m
-        name: SSE_JSESSIONID
+        name: BOARD_JSESSIONID
 
+debug: false
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+logging:
+  level:
+    com.board: debug
+    org.springframework.web.servlet: debug
+    org.hibernate.sql: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace

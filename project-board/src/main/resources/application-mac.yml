@@ -2,34 +2,22 @@ spring:
   jpa:
     show-sql: true
     database-platform: H2
-    hibernate:
-      ddl-auto: create
+    hibernate.ddl-auto: create
     defer-datasource-initialization: true
     properties:
-      hibernate:
-        format_sql: true
-        default_batch_fetch_size: 100
-  sql:
-    init:
-      mode: always
+      hibernate.format_sql: true
+      hibernate.default_batch_fetch_size: 100
+  sql.init.mode: always
   datasource:
-    hikari:
-      driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:mem://localhost/~/h2/test;MODE=MYSQL;
-      username: sa
-      password:
-  data:
-    rest:
-      base-path: /api
-      detection-strategy: annotated
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem://localhost/~/h2/test;MODE=MYSQL;
+    username: sa
+    password:
+  data.rest:
+    base-path: /api
+    detection-strategy: annotated
 #    hikari:
 #      driver-class-name: com.mysql.cj.jdbc.Driver
 #      jdbc-url: jdbc:mysql://localhost:3306/TEST_DB
 #      username: root
 #      password: 1234
-logging:
-  level:
-    org:
-      hibernate:
-        sql: info
-        type.descriptor.sql.BasicBinder: trace
